@@ -1,0 +1,48 @@
+<html>
+
+    <head>
+        <title>Reajuste de salário</title>  
+        <script type="text/javascript">
+
+        </script>
+    </head>
+
+    <body>
+        <form action="">
+            <label for="salario">Reajuste de salário:</label>
+            <input type="number" step="0.01" id="salario" value="0.00" 
+            onchange=" if (this.value > 0) {
+                var salarioAtual = document.getElementById('salario');
+                var salarioReajustado = document.getElementById('reajustado');
+
+                if (this.value <= 280) {
+                    var aumento = salarioAtual.value * 20 / 100;
+
+                    salarioReajustado.value = (parseFloat(salarioAtual.value) + aumento);
+                } 
+                else if (this.value > 280 && this.value <= 700) 
+                {
+                    var aumento = salarioAtual.value * 15 / 100;
+
+                    salarioReajustado.value = (parseFloat(salarioAtual.value) + aumento);
+                } 
+                else if (this.value > 700 && this.value <= 1500) 
+                {
+                    var aumento = salarioAtual.value * 10 / 100;
+
+                    salarioReajustado.value = (parseFloat(salarioAtual.value) + aumento);
+                } 
+                else if (this.value > 1500) 
+                {
+                    var aumento = salarioAtual.value * 5 / 100;
+
+                    salarioReajustado.value = (parseFloat(salarioAtual.value) + aumento);
+                }
+            } else {
+                alert('Digite um valor positivo!');
+            };" /> =
+            <input type="text" id="reajustado" size="10" value="" onfocus="getElementById('salario').focus();" /> reais
+        </form>
+        
+    </body>
+</html>

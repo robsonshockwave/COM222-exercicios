@@ -1,0 +1,53 @@
+body {
+  background-color: rgb(251, 113, 79);
+}
+
+.lupas {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.lupas img {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2.2em;
+  text-align: center;
+  text-shadow: 2px 2px #ff0000;
+}
+
+#container-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#container-images img {
+  border: 4px groove darkgray;
+  margin: 10px;
+  box-shadow: 2px 2px #ff0000;;
+}
+
+.img-normal {
+  height: 40px;
+  width: 40px;
+}
+
+.img-pequena {
+  height: 50px;
+  width: 50px;
+}
+
+.img-media {
+  height: 100px;
+  width: 100px;
+}
+
+.img-grande {
+  height: 150px;
+  width: 150px;
+}

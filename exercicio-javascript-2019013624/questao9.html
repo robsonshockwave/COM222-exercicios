@@ -1,0 +1,32 @@
+<html>
+
+    <head>
+        <title>Ler números até digitar 0</title>  
+        <script type="text/javascript">
+            var arrayNumeros = [];
+            var valor;
+            var total = 0;
+
+            const colocarNoArray = function (valor) {
+                if(Number.isInteger(valor) && valor !== 0) {
+                    arrayNumeros.push(valor);
+                    total = total + valor;
+                }
+            }
+
+            for(; valor != 0;) {
+                valor = parseInt(prompt("Digite um número positivo \nLetras e símbolos serão desconsiderados \nDigite 0 para cancelar a entrada de dados:"));
+                colocarNoArray(valor);
+            }
+
+            var media = 0;
+            media = (total / arrayNumeros.length);
+
+            document.write("Os números são " + arrayNumeros + " e a média deles é de " + media + "!");
+        </script>
+    </head>
+
+    <body>  
+    </body>
+
+</html>

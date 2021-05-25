@@ -1,0 +1,34 @@
+<html>
+
+    <head>
+        <title>Verificar maior palavra</title>  
+        <script type="text/javascript">
+            var nomePessoa = [];
+            var alturaPessoa = [];
+
+            for(var i=0; i<5; i++) {
+                nomePessoa[i] = String(prompt("Digite o nome da " + (i+1) +"º pessoa"));
+                for(var j=0; j<1; j++) {
+                    alturaPessoa[i] = parseFloat(prompt("Digite a altura da " + (i+1) +"º pessoa"));
+                }
+                j=0;
+            }
+
+            var maior = 0;
+            alturaPessoa.forEach(altura => {
+                if(altura > maior) {
+                    maior = altura;
+                }
+            });
+
+            indiceNome = alturaPessoa.indexOf(maior)
+
+            document.write("Essas são as pessoas: " + nomePessoa + " e as suas respectivas alturas são: " + alturaPessoa + ". A mais alta é " + nomePessoa[indiceNome] + " com " + maior + "m de altura!");
+            
+        </script>
+    </head>
+
+    <body>  
+    </body>
+
+</html>

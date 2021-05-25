@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <input type="datetime-local" class="textbox" id="dataDois" onchange="chamar()">
+
+        <input type="datetime-local" class="textbox" id="dataUm" onchange="chamar()"/>
+        
+        <input type="text" class="textbox" id="numeroDias" name="numdays"/>
+
+    <script>
+        function difDias(){
+            var dataUm = new Date(document.getElementById("dataUm").value);
+            var dataDois = new Date(document.getElementById("dataDois").value);
+            return parseInt((dataUm - dataDois) / (24 * 3600 * 1000));
+        }
+
+        function chamar(){
+            document.getElementById("numeroDias").value = isNaN(difDias()) ? "Selecione a outra data" : difDias() + " dias";  
+        }
+    </script>
+
+    </body>
+</html>

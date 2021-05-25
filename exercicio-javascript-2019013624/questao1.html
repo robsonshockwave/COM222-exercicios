@@ -1,0 +1,45 @@
+<html>
+
+    <head>
+        <title>Verificar maior palavra</title>  
+        <script type="text/javascript">
+            function verificarMaiorPalavra(frase){
+
+                var arrayPalavras = frase.split(" ");
+                var maior = 0;
+                var palavra = [];
+
+                verificar = (palavr) => {
+                    if (maior <= palavr.length) {
+                        maior = palavr.length;
+                        palavra.push(palavr);
+                    }
+
+                    palavra.reverse().forEach(palavr => {
+                        var index = palavra.indexOf(palavr);
+
+                        if (maior > palavr.length) {
+                            palavra.splice(index);
+                        }
+                    });
+                };
+
+                arrayPalavras.forEach(verificar);
+
+                return palavra;
+            }
+        </script>
+    </head>
+
+    <body>  
+        <p>
+            <script type="text/javascript">
+            text = prompt("Digite uma frase para verificar qual é a maior palavra:", "");
+            resposta = verificarMaiorPalavra(text);
+
+            document.write("'" + resposta + "' <b>é(são)</b> a(s) maior(es) palavra.");
+            </script>  
+        </p>
+    </body>
+
+</html>
