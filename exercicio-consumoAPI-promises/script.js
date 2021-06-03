@@ -19,11 +19,11 @@ buscarCidade = function(cidade) {
     });
 }
 
-colocarNoHtml = function(indo) {
-    const climaAtual = indo.weather[0].description;
-    const temperaturaAtual = (indo.main.temp - 273.15).toFixed(2);
-    const temperaturaMinima = (indo.main.temp_min - 273.15).toFixed(2);
-    const temperaturaMaxima = (indo.main.temp_max - 273.15).toFixed(2);
+colocarNoHtml = function(info) {
+    const climaAtual = info.weather[0].description;
+    const temperaturaAtual = (info.main.temp - 273.15).toFixed(2);
+    const temperaturaMinima = (info.main.temp_min - 273.15).toFixed(2);
+    const temperaturaMaxima = (info.main.temp_max - 273.15).toFixed(2);
     
     $("#resultado").html(
         `<p>Condição Atual: ${climaAtual}</p>
