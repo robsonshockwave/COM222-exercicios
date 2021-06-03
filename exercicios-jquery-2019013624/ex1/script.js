@@ -4,13 +4,11 @@ $(document).ready(() => {
         var lista = [];
 
         $("input").each((index, element) => {
-            lista.push("<li>" + element.value +"</li>");
+            lista[index] = "<li>" + element.value +"</li>";
+            //lista.push("<li>" + element.value +"</li>");
             element.value = "";
         });
 
         $("ol").html(lista);
-        $("input").each((index, element) => {
-            lista.push("<li>" + element.value +"</li>");
-        })
     });
 });
